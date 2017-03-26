@@ -64,13 +64,13 @@ jQuery(function($) {'use strict',
 		var name = $('input[name$="name"]').val();
 		var email = $('input[type$="email"]').val();
 		var subject = $('input[name$="subject"]').val();
-		var phone = $('input[name$="value"]');
-		var company = $('input[name$="value"]');
-		var message = $('input[name$="value"]');
+		var phone = $('input[type$="number"]').val();
+		var company = $('input[name$="company"]').val();
+		var message = $('textarea[name$="message"]').val();
 		$.ajax({
 			url: "https://formspree.io/jeansebastiengravel@hotmail.com", 
 			method: "POST",
-			data: {message: "Nom : " + name + " Email : " + email},
+			data: {message: "Nom : " + name + "<br>   Email : " + email + "  Sujet : " + subject + "   Telephone :  " + phone + "  Company : " + company + "  Message : " message},
 			dataType: "json",
 			beforeSend: function(){
 				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
