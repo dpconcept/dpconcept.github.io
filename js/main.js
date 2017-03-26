@@ -76,7 +76,7 @@ jQuery(function($) {'use strict',
 				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
 			}
 		}).done(function(data){
-			form_status.html('<p class="text-success">' + Email sent, Thank you + '</p>').delay(3000).fadeOut();
+			form_status.html('<p class="text-success"> Email sent, Thank you </p>').delay(3000).fadeOut();
 		});
 	});
 	
