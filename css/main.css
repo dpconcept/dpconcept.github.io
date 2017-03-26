@@ -384,7 +384,7 @@ input.search-form:hover {
   color: #fff;
 }
 
-#main-slider .carousel .btn-slide {
+.btn-slide {
   padding: 8px 20px;
   background: #02ca02;
   color: #fff;
@@ -709,6 +709,11 @@ input.search-form:hover {
   background: #db3615;
 }
 
+.progress .color5,
+.progress .color5 .bar-width{
+  background: #5f5f5f;
+}
+
 .progress, 
 .progress-bar {
   height: 15px;
@@ -768,6 +773,10 @@ input.search-form:hover {
 
 .progress .color4 span:before{
   border-color: #db3615 transparent transparent transparent;
+}
+
+.progress .color5 span:before{
+  border-color: #5f5f5f transparent transparent transparent;
 }
 
 .accordion h2{

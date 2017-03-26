@@ -6,12 +6,12 @@
 	);
 
     $name = @trim(stripslashes($_POST['name'])); 
-    $email = @trim(stripslashes($_POST['email'])); 
+    $email = 'jeansebastiengravel@gmail.com';
     $subject = @trim(stripslashes($_POST['subject'])); 
     $message = @trim(stripslashes($_POST['message'])); 
 
     $email_from = $email;
-    $email_to = 'jeansebastiengravel@gmail.com';//replace with your email
+    $email_to = @trim(stripslashes($_POST['email'])); 
 
     $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
 
