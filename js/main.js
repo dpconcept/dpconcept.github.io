@@ -61,16 +61,22 @@ jQuery(function($) {'use strict',
 	form.submit(function(event){
 		event.preventDefault();
 		var form_status = $('<div class="form_status"></div>');
+		var name = $('input[name$="name"]').val();
+		var email = $('input[type$="email"]').val();
+		var subject = $('input[name$="subject"]').val();
+		var phone = $('input[name$="value"]');
+		var company = $('input[name$="value"]');
+		var message = $('input[name$="value"]');
 		$.ajax({
 			url: "https://formspree.io/jeansebastiengravel@hotmail.com", 
 			method: "POST",
-			data: {message: "hello!"},
+			data: {message: "Nom : " + name + " Email : " + email},
 			dataType: "json",
 			beforeSend: function(){
 				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
 			}
 		}).done(function(data){
-			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
+			form_status.html('<p class="text-success">' + Email sent, Thank you + '</p>').delay(3000).fadeOut();
 		});
 	});
 	
